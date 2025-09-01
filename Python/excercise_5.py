@@ -201,3 +201,32 @@ def txt_file():
 txt_file()
 
 #Qn.14
+import pickle
+print("working woth binary file")
+k= open("name.txt","ab")
+
+n = int(input("Enter the number of items"))
+for i in range(n):
+    item_no = int(input("\tEnter item no"))
+    item_name = input("\tEnter item name")
+    qty = int(input("\tenter the quantity"))
+    price = float(input("\tenter the price"))
+    amount = qty*price
+    items = [item_no, item_name, qty, price, amount]
+    print()
+    pickle.dump(items, k)
+
+k.close()
+k = open("name.txt", "rb")
+while True:
+    try:
+        items = pickle.load(k)
+        print(f"\tItem No: {items[0]}")
+        print(f"\tItem Name: {items[1]}")
+        print(f"\tQuantity: {items[2]}")
+        print(f"\tPrice: {items[3]}")
+        print(f"\tAmount: {items[4]}")
+        
+    except EOFError:
+        break
+k.close()
