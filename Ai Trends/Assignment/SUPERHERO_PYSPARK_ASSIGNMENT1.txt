@@ -1,0 +1,10 @@
+﻿For Superheroes dataset:
+1. Reading Data from file
+2. Show only top 10 records.
+3. Find the count of male heroes.
+4. Find the count of Female heroes.
+5. Find the count of the particular race.
+6. Find the average height of characters in each 
+publisher
+7. Write a sql query to select superheroes with 
+blue eyes
