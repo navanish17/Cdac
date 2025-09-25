@@ -1,0 +1,28 @@
+1. For World cup players dataset:
+
+1. Reading Data from file
+2. Schema of Dataframe
+3. count of the number of Rows and Columns of Dataframe.
+4. Show the player name and coach name
+5. Show the records where Match ID must be equal to 1096 and calculate how many records/rows are there in the filtered output.
+6. order the data by match id
+7. Show the records of position C and event is G40'.
+8. Show the unique records with respect to match id.
+9. Write a sql query to select player name and coach name from dataframe.
+10. add a new column year which contains constant value "1930".
+11. Create a new column IsGoalEvent, check if Event column contains 'G' 
+      1. The new column should contain Y if Event column contains 'G' 
+      2. The new column should contain N if Event column does not contain 'G' 
+
+
+2. for mtcars file:
+
+1. Find the top five records of mpg attribute.
+2. Find out the records where the value of mpg is less than 18.
+3. Add a new column named as "wtTon" to dataframe with values of weight 
+column multiplied by 0.45. 
+
+4. Compute the average weight of cars by their cylinders. 
+
+5. Write a sql query to find gears where the value of cylinder lies 
+between 4 and 9.

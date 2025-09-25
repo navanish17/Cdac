@@ -83,6 +83,21 @@ cursor.close()
 conn.close()
 
 # b. Calculating the average quantity sold for each client that has a maximum order value of 15000.00.
+# Create a cursor
+cursor.execute("""SELECT c.CLIENTNO, c.clientname, 
+       AVG(d.QTYORDERED) AS Avg_Qty_Sold
+FROM CLIENT_MASTER c
+JOIN SALES_ORDER s ON c.CLIENTNO = s.CLIENTNO
+JOIN SALES_ORDER_DETAILS d ON s.ORDERNO = d.ORDERNO
+GROUP BY c.CLIENTNO, c.clientname
+HAVING MAX(d.QTYORDERED * d.PRODUCTRATE) <= 15000;
+""")
+for row in cursor.fetchall():
+    print(row)
+
+cursor.close()
+conn.close()
+
 
 
 
